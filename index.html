@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexus Upskill | Industry-Led Live Mentorship</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .glass {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .skill-card:hover {
+        transform: translateY(-8px);
+        border-color: #3b82f6;
+        box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.3);
+      }
+      .modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 100;
+        align-items: center;
+        justify-content: center;
+      }
+      .modal.active {
+        display: flex;
+      }
+      .ai-gradient {
+        background: linear-gradient(90deg, #3b82f6, #10b981);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #25d366;
+        color: #fff;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+        background-color: #128c7e;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-950 text-slate-100 font-sans selection:bg-blue-500/30">
+    <a
+      href="https://wa.me/916304886413?text=Hi%20Chaithanya,%20I'm%20interested%20in%20your%20tech%20mentorship.%20Can%20you%20guide%20me?"
+      class="whatsapp-float"
+      target="_blank"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <header
+      class="py-20 px-6 text-center bg-gradient-to-b from-blue-900/20 to-transparent"
+    >
+      <div
+        class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide text-blue-400 uppercase bg-blue-400/10 rounded-full"
+      >
+        1-on-1 Industry Mentorship & Project Building
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-6">
+        Nexus <span class="text-blue-500"> Upskill.</span>
+      </h1>
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-6">
+        Build Your Ideas. <span class="text-blue-500">Master the Tech.</span>
+      </h1>
+
+      <p class="text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+        We don't just teach code. We ask for <strong>your ideas</strong> and
+        help you implement & deploy them. Professional Resume Building included
+        in every track.
+      </p>
+
+      <div class="flex flex-col md:flex-row justify-center gap-4">
+        <button
+          onclick="openModal('Free Demo Class')"
+          class="bg-emerald-600 hover:bg-emerald-700 px-10 py-4 rounded-xl font-bold transition-all shadow-lg shadow-emerald-500/20"
+        >
+          Book Free Demo Class
+        </button>
+        <a
+          href="#courses"
+          class="border border-slate-700 hover:bg-slate-800 px-10 py-4 rounded-xl font-bold transition"
+          >Explore Domains</a
+        >
+      </div>
+    </header>
+
+    <section class="max-w-6xl mx-auto px-6 mb-24">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass p-8 rounded-3xl border-blue-500/20">
+          <i class="fas fa-lightbulb text-blue-400 text-3xl mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Your Idea, Our Guidance</h3>
+          <p class="text-slate-400 text-sm">
+            Have a unique idea for an App, Web platform, or AI? We help you
+            architect, build, and deploy it from scratch.
+          </p>
+        </div>
+        <div class="glass p-8 rounded-3xl border-emerald-500/20">
+          <i class="fas fa-project-diagram text-emerald-400 text-3xl mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Industry Projects</h3>
+          <p class="text-slate-400 text-sm">
+            No idea yet? We provide trending industry-standard projects that
+            make your portfolio stand out to recruiters.
+          </p>
+        </div>
+        <div class="glass p-8 rounded-3xl border-purple-500/20">
+          <i class="fas fa-file-invoice text-purple-400 text-3xl mb-4"></i>
+          <h3 class="text-xl font-bold mb-2">Resume Building</h3>
+          <p class="text-slate-400 text-sm">
+            We personally guide you in crafting a high-impact resume that
+            highlights your projects and industry skills.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-6 mb-24">
+      <div
+        class="glass p-10 rounded-[2rem] border-blue-500/20 relative overflow-hidden text-center"
+      >
+        <h2 class="text-3xl font-bold mb-6 text-blue-400 italic">
+          Live Google Meet Sessions (1-2 Hours Daily)
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8 text-left">
+          <div class="space-y-4">
+            <p>
+              <i class="fas fa-check-circle text-emerald-400 mr-2"></i
+              ><strong>Real-World Experts:</strong> Not tutors—actual working
+              professionals.
+            </p>
+            <p>
+              <i class="fas fa-check-circle text-emerald-400 mr-2"></i
+              ><strong>24/7 Availability:</strong> Reach out anytime after
+              office hours for doubts.
+            </p>
+          </div>
+          <div class="space-y-4">
+            <p>
+              <i class="fas fa-check-circle text-emerald-400 mr-2"></i
+              ><strong>Project Deployment:</strong> Learn to host your apps and
+              sites for the world to see.
+            </p>
+            <p>
+              <i class="fas fa-check-circle text-emerald-400 mr-2"></i
+              ><strong>Lifetime Guidance:</strong> We stay with you until you
+              land your dream job.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses" class="max-w-7xl mx-auto px-6 mb-24">
+      <h2 class="text-4xl font-bold text-center mb-16">Select Your Domain</h2>
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+        id="skills-container"
+      ></div>
+    </section>
+
+    <section class="max-w-4xl mx-auto px-6 mb-24 text-center">
+      <div
+        class="glass p-12 rounded-3xl border-emerald-500/20 bg-emerald-500/5"
+      >
+        <h2 class="text-3xl font-bold mb-4">Start Your Journey Today</h2>
+        <p class="text-slate-400 mb-8 font-semibold italic text-blue-400">
+          Note: After messaging or mailing, please wait for the approval & slot
+          confirmation.
+        </p>
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-6"
+        >
+          <div
+            class="text-left bg-slate-900 p-4 rounded-xl border border-slate-800"
+          >
+            <p
+              class="text-xs uppercase tracking-widest text-slate-500 font-bold"
+            >
+              Industry Learning Specialist
+            </p>
+            <a
+              href="tel:6304886413"
+              class="text-xl font-bold text-white hover:text-blue-400"
+            >
+              <i class="fas fa-phone-alt mr-2 text-blue-500"></i>+91 6304886413
+            </a>
+          </div>
+          <a
+            href="https://wa.me/916304886413"
+            class="bg-emerald-600 px-8 py-4 rounded-xl font-bold hover:bg-emerald-700 transition"
+          >
+            Message on WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div id="enrollModal" class="modal px-4">
+      <div class="glass w-full max-w-md p-8 rounded-3xl relative">
+        <button
+          onclick="closeModal()"
+          class="absolute top-4 right-4 text-slate-500 hover:text-white text-xl"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+        <h3 class="text-2xl font-bold mb-2">Enrollment Request</h3>
+        <p
+          id="selectedSkillLabel"
+          class="text-blue-400 font-semibold mb-6 italic"
+        ></p>
+        <form id="enrollForm" class="space-y-4">
+          <input type="hidden" id="courseInput" />
+          <input
+            type="text"
+            id="userName"
+            placeholder="Your Full Name"
+            required
+            class="w-full bg-slate-900 border border-slate-700 rounded-xl p-4 focus:border-blue-500 outline-none"
+          />
+          <input
+            type="email"
+            id="userEmail"
+            placeholder="Your Email Address"
+            required
+            class="w-full bg-slate-900 border border-slate-700 rounded-xl p-4 focus:border-blue-500 outline-none"
+          />
+          <input
+            type="tel"
+            id="userPhone"
+            placeholder="Your Contact Number"
+            required
+            class="w-full bg-slate-900 border border-slate-700 rounded-xl p-4 focus:border-blue-500 outline-none"
+          />
+          <button
+            type="submit"
+            class="w-full bg-blue-600 hover:bg-blue-700 py-4 rounded-xl font-bold transition mt-2 shadow-lg shadow-blue-500/20"
+          >
+            Send Enrollment Email
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="bg-slate-900/50 py-12 border-t border-slate-800 text-center">
+      <p class="text-slate-500">
+        © 2026 Nexus Upskill | Lead Mentor: Chaithanya
+      </p>
+    </footer>
+
+    <script>
+      const courses = [
+        {
+          name: "Full-Stack Web Development",
+          price: "5,000",
+          tech: "MERN/Next.js + AI + Database + Hosting",
+          popular: true,
+        },
+        {
+          name: "Full-Stack App Development",
+          price: "5,000",
+          tech: "Flutter + Backend + AI + Hosting",
+          popular: true,
+        },
+        {
+          name: "Front-End Development",
+          price: "3,000",
+          tech: "HTML, CSS, JS, React, Next, Tailwind",
+        },
+        {
+          name: "Back-End Development",
+          price: "4,000",
+          tech: "Node, Java, Python, Flask, Django, JWT",
+        },
+        {
+          name: "UI/UX Development",
+          price: "3,000",
+          tech: "Figma, User Flow, Wireframing, Prototypes",
+        },
+        {
+          name: "App Development",
+          price: "4,000",
+          tech: "Flutter, Bloc-Arch, State Management",
+        },
+        {
+          name: "Database Design",
+          price: "4,000",
+          tech: "Postgres, MySQL, MongoDB, Redis",
+        },
+        {
+          name: "AI & Tools Integration",
+          price: "4,000",
+          tech: "AI Model Integration, Git, GitHub",
+        },
+        {
+          name: "Math for Machine Learning",
+          price: "2,000",
+          tech: "Notes, Formulas, Real-world integration",
+        },
+        {
+          name: "System Architecture",
+          price: "6,000",
+          tech: "Design, Scalability, Deployment",
+        },
+        {
+          name: "Data Structures & Algorithms",
+          price: "4,000",
+          tech: "Logic, Problem Solving, Interviews",
+        },
+      ];
+
+      const container = document.getElementById("skills-container");
+
+      courses.forEach((c) => {
+        container.innerHTML += `
+                <div class="glass p-6 rounded-2xl skill-card flex flex-col justify-between border ${c.popular ? "border-blue-500/50 shadow-lg shadow-blue-500/10" : "border-white/5"}">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-lg font-bold leading-tight">${c.name}</h3>
+                            ${c.popular ? '<span class="text-[9px] bg-blue-600 px-2 py-0.5 rounded-full uppercase font-bold tracking-widest whitespace-nowrap ml-2">Best Value</span>' : ""}
+                        </div>
+                        <p class="text-slate-400 text-xs mb-6 leading-relaxed">${c.tech}</p>
+                    </div>
+                    <div>
+                        <div class="text-xl font-bold mb-4 text-blue-400">₹${c.price}</div>
+                        <button onclick="openModal('${c.name}')" class="w-full ${c.popular ? "bg-blue-600" : "bg-slate-800"} hover:opacity-90 py-3 rounded-xl transition text-sm font-bold">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            `;
+      });
+
+      const modal = document.getElementById("enrollModal");
+      function openModal(name) {
+        document.getElementById("selectedSkillLabel").innerText =
+          `Domain: ${name}`;
+        document.getElementById("courseInput").value = name;
+        modal.classList.add("active");
+      }
+      function closeModal() {
+        modal.classList.remove("active");
+      }
+
+      document.getElementById("enrollForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const skill = document.getElementById("courseInput").value;
+        const name = document.getElementById("userName").value;
+        const email = document.getElementById("userEmail").value;
+        const phone = document.getElementById("userPhone").value;
+
+        const mailTo = "neelamchaithanya6@gmail.com";
+        const subject = `Enrollment Request: ${skill}`;
+        const body = `mail: ${email}\nname: ${name}\ncontact number: ${phone}\n\nI am interested in ${skill}. I want to build my own project idea and receive guidance for deployment and resume building.`;
+
+        window.location.href = `mailto:${mailTo}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        alert(
+          "Redirecting to email. Please send the pre-filled mail and wait for approval!",
+        );
+        closeModal();
+      });
+
+      window.onclick = (e) => {
+        if (e.target == modal) closeModal();
+      };
+    </script>
+  </body>
+</html>
