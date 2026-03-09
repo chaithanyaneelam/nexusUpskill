@@ -78,20 +78,17 @@
       >
         1-on-1 Industry Mentorship & Project Building
       </div>
-
       <h1 class="text-5xl md:text-7xl font-extrabold mb-6">
-        Nexus <span class="text-blue-500"> Upskill.</span>
+        Nexus <span class="text-blue-500">Upskill.</span>
       </h1>
-      <h1 class="text-5xl md:text-7xl font-extrabold mb-6">
+      <h2 class="text-3xl md:text-5xl font-extrabold mb-6">
         Build Your Ideas. <span class="text-blue-500">Master the Tech.</span>
-      </h1>
-
+      </h2>
       <p class="text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-        We don't just teach code. We ask for <strong>your ideas</strong> and
-        help you implement & deploy them. Professional Resume Building included
-        in every track.
+        We don't just teach code. We help you implement & deploy
+        <strong>your ideas</strong>. Professional Resume Building included in
+        every track.
       </p>
-
       <div class="flex flex-col md:flex-row justify-center gap-4">
         <button
           onclick="openModal('Free Demo Class')"
@@ -113,24 +110,24 @@
           <i class="fas fa-lightbulb text-blue-400 text-3xl mb-4"></i>
           <h3 class="text-xl font-bold mb-2">Your Idea, Our Guidance</h3>
           <p class="text-slate-400 text-sm">
-            Have a unique idea for an App, Web platform, or AI? We help you
-            architect, build, and deploy it from scratch.
+            Have a unique idea? We help you architect, build, and deploy it from
+            scratch.
           </p>
         </div>
         <div class="glass p-8 rounded-3xl border-emerald-500/20">
           <i class="fas fa-project-diagram text-emerald-400 text-3xl mb-4"></i>
           <h3 class="text-xl font-bold mb-2">Industry Projects</h3>
           <p class="text-slate-400 text-sm">
-            No idea yet? We provide trending industry-standard projects that
-            make your portfolio stand out to recruiters.
+            We provide trending industry-standard projects to make your
+            portfolio stand out.
           </p>
         </div>
         <div class="glass p-8 rounded-3xl border-purple-500/20">
           <i class="fas fa-file-invoice text-purple-400 text-3xl mb-4"></i>
           <h3 class="text-xl font-bold mb-2">Resume Building</h3>
           <p class="text-slate-400 text-sm">
-            We personally guide you in crafting a high-impact resume that
-            highlights your projects and industry skills.
+            Personal guidance in crafting high-impact resumes that highlight
+            your skills.
           </p>
         </div>
       </div>
@@ -147,25 +144,24 @@
           <div class="space-y-4">
             <p>
               <i class="fas fa-check-circle text-emerald-400 mr-2"></i
-              ><strong>Real-World Experts:</strong> Not tutors—actual working
+              ><strong>Real-World Experts:</strong> Actual working
               professionals.
             </p>
             <p>
               <i class="fas fa-check-circle text-emerald-400 mr-2"></i
-              ><strong>24/7 Availability:</strong> Reach out anytime after
-              office hours for doubts.
+              ><strong>24/7 Availability:</strong> Reach out anytime for doubts.
             </p>
           </div>
           <div class="space-y-4">
             <p>
               <i class="fas fa-check-circle text-emerald-400 mr-2"></i
-              ><strong>Project Deployment:</strong> Learn to host your apps and
-              sites for the world to see.
+              ><strong>Project Deployment:</strong> Host your apps for the world
+              to see.
             </p>
             <p>
               <i class="fas fa-check-circle text-emerald-400 mr-2"></i
-              ><strong>Lifetime Guidance:</strong> We stay with you until you
-              land your dream job.
+              ><strong>Lifetime Guidance:</strong> With you until you land a
+              job.
             </p>
           </div>
         </div>
@@ -178,6 +174,35 @@
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         id="skills-container"
       ></div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 mb-24">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div
+          class="glass p-10 rounded-3xl text-center border-blue-500/20 relative"
+        >
+          <div class="text-5xl font-extrabold text-blue-400 mb-4">150+</div>
+          <h3 class="text-xl font-bold mb-3 text-white">Active Learners</h3>
+          <p class="text-slate-400 leading-relaxed">
+            Currently, over 150+ students are effectively upskilling through our
+            platform, mastering industry stacks and building innovative
+            real-world projects daily.
+          </p>
+        </div>
+        <div
+          class="glass p-10 rounded-3xl text-center border-emerald-500/20 relative"
+        >
+          <div class="text-5xl font-extrabold text-emerald-400 mb-4">60+</div>
+          <h3 class="text-xl font-bold mb-3 text-white">
+            Successful Placements
+          </h3>
+          <p class="text-slate-400 leading-relaxed">
+            Our result-oriented mentorship has helped 60+ students bridge the
+            gap between learning and industry, successfully securing internships
+            at reputable tech firms.
+          </p>
+        </div>
+      </div>
     </section>
 
     <section class="max-w-4xl mx-auto px-6 mb-24 text-center">
@@ -203,16 +228,15 @@
             <a
               href="tel:6304886413"
               class="text-xl font-bold text-white hover:text-blue-400"
+              ><i class="fas fa-phone-alt mr-2 text-blue-500"></i>+91
+              6304886413</a
             >
-              <i class="fas fa-phone-alt mr-2 text-blue-500"></i>+91 6304886413
-            </a>
           </div>
           <a
             href="https://wa.me/916304886413"
             class="bg-emerald-600 px-8 py-4 rounded-xl font-bold hover:bg-emerald-700 transition"
+            >Message on WhatsApp</a
           >
-            Message on WhatsApp
-          </a>
         </div>
       </div>
     </section>
@@ -331,7 +355,6 @@
       ];
 
       const container = document.getElementById("skills-container");
-
       courses.forEach((c) => {
         container.innerHTML += `
                 <div class="glass p-6 rounded-2xl skill-card flex flex-col justify-between border ${c.popular ? "border-blue-500/50 shadow-lg shadow-blue-500/10" : "border-white/5"}">
@@ -344,12 +367,9 @@
                     </div>
                     <div>
                         <div class="text-xl font-bold mb-4 text-blue-400">₹${c.price}</div>
-                        <button onclick="openModal('${c.name}')" class="w-full ${c.popular ? "bg-blue-600" : "bg-slate-800"} hover:opacity-90 py-3 rounded-xl transition text-sm font-bold">
-                            Learn More
-                        </button>
+                        <button onclick="openModal('${c.name}')" class="w-full ${c.popular ? "bg-blue-600" : "bg-slate-800"} hover:opacity-90 py-3 rounded-xl transition text-sm font-bold">Learn More</button>
                     </div>
-                </div>
-            `;
+                </div>`;
       });
 
       const modal = document.getElementById("enrollModal");
@@ -369,11 +389,9 @@
         const name = document.getElementById("userName").value;
         const email = document.getElementById("userEmail").value;
         const phone = document.getElementById("userPhone").value;
-
         const mailTo = "neelamchaithanya6@gmail.com";
         const subject = `Enrollment Request: ${skill}`;
         const body = `mail: ${email}\nname: ${name}\ncontact number: ${phone}\n\nI am interested in ${skill}. I want to build my own project idea and receive guidance for deployment and resume building.`;
-
         window.location.href = `mailto:${mailTo}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         alert(
           "Redirecting to email. Please send the pre-filled mail and wait for approval!",
